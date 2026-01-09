@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn = document.createElement('button');
       btn.className = 'garbage-icon';
       btn.innerHTML = `
-        <img src="images/illust${item.img}.jpg" alt="${item.label}">
+        <img src="illust${item.img}.jpg" alt="${item.label}">
         <span class="label">${item.label}</span>
       `;
 
