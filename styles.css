@@ -31,75 +31,59 @@ h1 {
   color: #333;
 }
 
+/* ボタンが並ぶグリッドの設定 */
 .icon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  /* 100pxの最小幅で自動配置 */
-  gap: 15px;
-  margin: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 15px 0;
 }
 
 .garbage-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 15px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  transition: 0.2s;
 }
 
 .garbage-icon:hover {
-  background-color: #e0f2f1;
-  /* ホバー時の色 */
+  background-color: #e8f5e9;
   border-color: #4CAF50;
 }
 
+/* アイコン画像の設定 */
 .garbage-icon img {
-  width: 60px;
-  /* アイコンのサイズ */
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 5px;
-}
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 
-/* アイコン画像のコンテナとしての調整 */
-.garbage-icon img {
-  width: 80px;
-  /* 少しサイズを大きくすると見やすくなります */
-  height: 80px;
-  /* 正方形を維持 */
   object-fit: cover;
-  /* containからcoverに変更：枠いっぱいに表示（端が少し切れる場合があります） */
-  margin-bottom: 8px;
-  border-radius: 4px;
-  /* 画像自体の角も少し丸くするときれいです */
-  background-color: #fff;
-  /* 画像の背景を白にして統一感を出す */
+    background-color: #fff;
+    border: 1px solid #eee;
+    flex-shrink: 0;
 }
 
-/* もしイラストの端を切らしたくない場合は contain のまま、背景色を指定するのがおすすめ */
-.garbage-icon img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain; 
-  background-color: #eee; 
-  margin-bottom: 8px;
-}
-
+/* 文字ラベルの設定 */
 .garbage-icon .label {
-  font-size: 14px;
-  color: #555;
+  font-size: 13px;
   font-weight: bold;
-  height: 3em;
-    /* 2〜3行分の高さを確保 */
-    display: flex;
-    align-items: center;
-    /* 縦方向の中央揃え */
-    justify-content: center;
+  color: #555;
+  text-align: left;
+  line-height: 1.2;
+  height: auto;
+}
+
+.label {
+  font-size: 12px;
+  /* 14pxから12pxに縮小 */
+  font-weight: bold;
+  color: #555;
 }
 
 #result {
